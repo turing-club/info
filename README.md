@@ -18,6 +18,6 @@ In this repository you'll find some of our resources for helping you get into AI
 
 ### Intermediate (A bit of coding experience is useful here)
 
-You'll probably want to start installing packages and executing code on your computer at this point to try out some cool AI projects! To do that, you'll have to become familiar with your computer's **shell**. [Here's our intro to shells!]
+You'll probably want to start installing packages and executing code on your computer at this point to try out some cool AI projects! To do that, you'll have to become familiar with your computer's **shell**. [Here's our intro to shells!](https://github.com/turing-club/info/blob/master/intro-to-shells.md)
 
 More coming soon!
