@@ -13,14 +13,11 @@ In this repository you'll find some of our resources for helping you get into AI
 **Time to check out some software?**
 
 - [WEKA](https://www.cs.waikato.ac.nz/ml/weka/index.html) is an easy to use app that allows you to get working with big datasets! If you're stuck, check out the [WEKA wiki.](http://weka.wikispaces.com/Frequently+Asked+Questions)
+
 - Wanna work on some code? You'll need an app to write your code in. We recommend [Atom](https://atom.io/) - it's very easy to use for almost any programming language you can think of, and yet it's extremely customizable!
 
 ### Intermediate (A bit of coding experience is useful here)
 
 You'll probably want to start installing packages and executing code on your computer at this point to try out some cool AI projects! To do that, you'll have to become familiar with your computer's **shell**. [Here's our intro to shells!]
-
-
-
-
 
 More coming soon!
