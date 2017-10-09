@@ -12,7 +12,8 @@ A lot of the coolest software and code out there doesn't come with a graphical u
 
 ## OK, so how do I set all this up?
 
-**Mac**: Go to your Applications folder. Inside that folder is a folder called Utilities. Inside that folder is an app called **Terminal**. Start it up!
+### Mac:
+Go to your Applications folder. Inside that folder is a folder called Utilities. Inside that folder is an app called **Terminal**. Start it up!
 
 Welcome to the other side of your computer. It might look a bit scary now, but don't worry! Now we're going to install a couple of useful packages: `pip` and `virtualenv`.
 
@@ -35,8 +36,8 @@ Awesome! Check our your virtual environment by typing `cd` followed by the name 
 Congratulations! You can now safely code within this environment.
 
 ---
-
-**Windows**: The first step is to install Python, a programming language that's used a lot in computer science, biology, and statistics. To get Python, go to [the Python website](https://www.python.org/downloads/release/python-363/), scroll to the bottom, and click on "Windows x86 executable installer". Then install Python as you would install any other app.
+### Windows:
+The first step is to install Python, a programming language that's used a lot in computer science, biology, and statistics. To get Python, go to [the Python website](https://www.python.org/downloads/release/python-363/), scroll to the bottom, and click on "Windows x86 executable installer". Then install Python as you would install any other app.
 
 Once that's finished, search (in the Start menu or through Cortana) for an app called **PowerShell**. Start it up!
 
