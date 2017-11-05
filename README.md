@@ -1,6 +1,6 @@
 # Turing Club Info Resource
 
-In this repository you'll find some of our resources for helping you get into AI and Machine learning quickly, and having fun while doing so!
+In this repository you'll find some of our resources for helping you get into AI and Machine learning quickly, and having fun while doing so! The files labelled with dates is the code used in our weekly meetings - most of this code is tutorial code and not original to this club.
 
 **Here's some helpful links to get you started!**
 
