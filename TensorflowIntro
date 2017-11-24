@@ -1,0 +1,136 @@
+import tensorflow as tf
+
+reset_graph()
+
+
+W = tf.Variable(20, name="W")  ## a regular Variable in TF
+R = tf.Variable(4, name="R")  ## a regular Variable in TF
+
+g = 2*W*R*R    ## g is a "Tensor" (a tensor is a way to represent all data. i.e vectors or a matrix)
+
+## We run a session to actually compute our desired calculations
+
+sess = tf.Session()
+sess.run(W.initializer)   ##initialize our variables 
+sess.run(R.initializer)
+our_result = sess.run(g)
+print(our_result)
+
+sess.close() ##then close the session
+
+# Why te complicated notation? For a bit simpler use: 
+with tf.Session() as sess:
+    W.initializer.run()  # initializes variables
+    R.initializer.run()
+    our_result = g.eval()   # evaluates our operation 
+our_result                 # same result
+
+
+# It is sometimes helpful (for more complex structures) to initialize variables at certain times, 
+# but sometimes it can be tedious to initalize one by one if we want to just initialize them all, hence we use simpler notation:
+
+init = tf.global_variables_initializer() #set up our initializer with this TF function
+
+with tf.Session() as sess:
+    init.run()            #initialize all our variables
+    our_result = g.eval()
+our_result                   #same result as past examples
+
+
+
+#Creating constants
+
+w = tf.constant(3)
+x = w + 10
+y = x + 5
+z = x * 2
+
+with tf.Session() as sess:
+    print(y.eval())  
+    print(z.eval())  
+    
+
+# Now let's actually do some interesting stuff
+#  ----Make sure you have sklearn in your virtualenv in order to be able to use the dataset-------
+
+import numpy as np
+
+from sklearn.datasets import fetch_california_housing  #sklearn has some useful built-in datasets
+
+reset_graph()  #start from scratch
+
+housing = fetch_california_housing()  # "fetch" (collect) the data from sklearn
+
+m, n = housing.data.shape      #get the shapes of your matrix
+
+housing_data_plus_bias = np.c_[np.ones((m, 1)), housing.data]  # store our housing data in a matrix plus a bias of size (m,1)
+
+X = tf.constant(housing_data_plus_bias, dtype=tf.float32, name="X") # Our constant X with the values of our data
+
+y = tf.constant(housing.target.reshape(-1, 1), dtype=tf.float32, name="y") # our labels (targets) which are reshaped to fit accoridngly
+
+XT = tf.transpose(X)   #the transposition of our matrix X
+
+theta = tf.matmul(tf.matmul(tf.matrix_inverse(tf.matmul(XT, X)), XT), y)  # our "weight" (matmul is the multiplication of elements)
+                                                                          # we (((X*'X)^-1)* y)
+with tf.Session() as sess:
+    theta_value = theta.eval()              # evaluate  theta (our weight)
+    
+theta_value
+
+
+
+
+# Now let's create the linear model
+# First scale the data so we can work with it
+
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()    # import the scaler
+scaled_housing_data = scaler.fit_transform(housing.data)            #scale the data
+scaled_housing_data_plus_bias = np.c_[np.ones((m, 1)), scaled_housing_data] #add the bias term
+
+reset_graph() # start on clean slate
+
+n_epochs = 1000       #number of iterations (will exaplain later)
+learning_rate = 0.01  # Tells us how much to advance with respect to our gradient. 
+ # Can't be too big because it will bounce off and can't be too small beacuse it will take a lot of time to compute
+
+X = tf.constant(scaled_housing_data_plus_bias, dtype=tf.float32, name="X") 
+
+y = tf.constant(housing.target.reshape(-1, 1), dtype=tf.float32, name="y")  
+
+theta = tf.Variable(tf.random_uniform([n + 1, 1], -1.0, 1.0, seed=42), name="theta") 
+
+y_pred = tf.matmul(X, theta, name="predictions")  # our predictions on the dataset 
+
+error = y_pred - y     # the difference between our predictions (y_pred) and the actual values (y)
+
+mse = tf.reduce_mean(tf.square(error), name="mse")     # Reduce the mean squared error in our "error" defined above
+
+gradients = 2/m * tf.matmul(tf.transpose(X), error)  # compute the gradients 
+
+training_op = tf.assign(theta, theta - learning_rate * gradients)
+
+init = tf.global_variables_initializer()
+
+with tf.Session() as sess:
+    sess.run(init)
+
+    for epoch in range(n_epochs):
+        if epoch % 100 == 0:
+            print("Epoch", epoch, "MSE =", mse.eval())
+        sess.run(training_op)
+    
+    best_theta = theta.eval()
+
+
+
+
+
+
+
+
+
+
+    
+
