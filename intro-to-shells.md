@@ -39,13 +39,12 @@ Congratulations! You can now safely code within this environment.
 ### Windows:
 The first step is to install Python, a programming language that's used a lot in computer science, biology, and statistics. To get Python, go to [the Python website](https://www.python.org/downloads/release/python-363/), scroll to the bottom, and click on "Windows x86 executable installer". Then install Python as you would install any other app.
 
-Once that's finished, search (in the Start menu or through Cortana) for an app called **PowerShell**. Start it up!
+Once that's finished, search (in the Start menu or through Cortana) for an app called **Command Prompt**. Start it up!
 
 Welcome to the other side of your computer. It might look a bit scary now, but don't worry! Now we're going to install a useful package: `virtualenv`. To do so, type the following code:
 ```
 pip install virtualenv
-pip install virtualenvwrapper-powershell
-Import-Module virtualenvwrapper
+pip install virtualenvwrapper-win
 ```
 
 `virtualenv` is a package that lets you do all of your coding and development in a single folder, or **virtual environment**, on your computer. This is useful because:
@@ -54,8 +53,8 @@ Import-Module virtualenvwrapper
 
 Now think of a cool name for your virtual environment - just make sure it's all lowercase and one word! For example, "my_coding_stuff"
 
-Now type `New-VirtualEnvironment` followed by the name you've just thought of, for example `New-VirtualEnvironment my_coding_stuff`
+Now type `mkvirtualenv` followed by the name you've just thought of, for example `mkvirtualenv my_coding_stuff`. Then, enter the folder where you'll be coding by typing `cd` followed by the name of your environment, for example `cd my_coding_stuff`. The last step is to activate the environment (you have to do this every time you enter the environment!) by typing `.\scripts\activate`. If it worked, you should see something like `(my_coding_stuff)` at the beginning of your prompt.
 
-Congratulations! You can now safely code within this environment. Note that unless you're prepared to change some files, you'll have to type `Import-Module virtualenvwrapper` every time before you start working in a virtual environment.
+Congratulations! You can now safely code within this environment.
 
 More stuff coming soon!
