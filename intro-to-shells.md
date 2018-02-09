@@ -15,11 +15,15 @@ A lot of the coolest software and code out there doesn't come with a graphical u
 ### Mac:
 Go to your Applications folder. Inside that folder is a folder called Utilities. Inside that folder is an app called **Terminal**. Start it up!
 
-Welcome to the other side of your computer. It might look a bit scary now, but don't worry! Now we're going to install a couple of useful packages: `pip` and `virtualenv`.
+Welcome to the other side of your computer. It might look a bit scary now, but don't worry! Now we're going to install a couple of useful packages: `pip` and `virtualenv`. **Note: There's a good chance that your Mac already comes with pip, so try typing `pip` in Terminal first! If it doesn't return an error then skip you can skip ahead to the virtualenv section.**
+
+**Pip**
 
 First, type `easy_install pip`
 
 `pip` is a tool you'll use to install a lot of packages for your computer. Not as easy as double clicking to install, but it's not too bad.
+
+**Virtualenv**
 
 Once this is finished, type `pip install virtualenv`
 
