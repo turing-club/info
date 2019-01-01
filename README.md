@@ -6,6 +6,7 @@ In this repository you'll find some of our resources for helping you get into AI
 
 ### Beginner (little to no coding experience required)
 - [The main tool we use to make AI - Google Colab!](https://colab.research.google.com/)
+- [Here's our tutorial on how to use Colab.](https://github.com/turing-club/info/blob/master/intro-to-colab.md)
 - [Play around with AI here, get your feet wet](https://experiments.withgoogle.com/ai)
 - [Here's a great tutorial from Tensorflow and Keras](https://www.tensorflow.org/guide/keras), the two main AI frameworks we use in our workshops. All of the code can be run in your web browser using the Colab notebook links at the top of this page!
 - [DeepTesla](http://selfdrivingcars.mit.edu/deeptesla/) - teach an autonomous car to drive by playing around with a few numbers. Check this site out when you're more confident in your coding skills to improve the car's accuracy!
