@@ -14,7 +14,11 @@ should appear. Click on Colaboratory and wait for it to load (or open a Colabora
 of our workshops).
 
 ## Using Colab
-The resulting interface is known as a *notebook*. Think of this as an interactive notebook in which you can write code and notes,
+The resulting interface looks like this:
+
+![Colab interface](https://github.com/turing-club/info/blob/master/colab.png)
+
+This is known as a *notebook*. Think of this as an interactive notebook in which you can write code and notes,
 and attach pictures. The main difference from a typical notebook, though, is that you can run the code that you write, directly
 in your web browser. Your notebook is linked to a virtual computer on Google's servers on which you can run your code and
 computations!
