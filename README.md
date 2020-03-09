@@ -11,7 +11,7 @@ In this repository you'll find some of our resources for helping you get into AI
 - [Here's a great tutorial from Tensorflow and Keras](https://www.tensorflow.org/tutorials/keras/classification), the two main AI frameworks we use in our workshops. All of the code can be run in your web browser using the Colab notebook links at the top of this page!
 - [DeepTesla](http://selfdrivingcars.mit.edu/deeptesla/) - teach an autonomous car to drive by playing around with a few numbers. Check this site out when you're more confident in your coding skills to improve the car's accuracy!
 - [An awesome (if a bit concept-heavy) AI textbook](http://artint.info/) written by UBC's [Alan Mackworth](http://www.cs.ubc.ca/~mack/).
-- More resources will be posted on our all-new website, *coming soon!*
+- If you want to dive deeper into AI, check out [Andrew Ng's Coursera course](https://www.coursera.org/learn/machine-learning) which is considered by many to be one of the most important AI/machine learning courses out there.
 
 **Time to check out some software?**
 - [WEKA](https://www.cs.waikato.ac.nz/ml/weka/index.html) is an easy to use app that allows you to get working with big datasets! This is especially useful if you want to get a broad overview of the *mechanisms* of the most popular machine learning techniques. If you're stuck, check out the [WEKA wiki.](http://weka.wikispaces.com/Frequently+Asked+Questions)
